@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e0b4291-c485-4967-b3a4-922f2041dd5e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/hotel/templates/home.twig" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/hotel/templates/home.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/hotel/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/hotel/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/hotel/templates/header.twig" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/hotel/templates/header.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -79,7 +80,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/hotel/templates/home.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
@@ -95,8 +96,17 @@
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/hotel/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="38" column="21" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="21" />
+            <state relative-caret-position="348">
+              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/hotel/templates/header.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -144,7 +154,6 @@
         <option value="$PROJECT_DIR$/wp-content/themes/hotel/home.php" />
         <option value="$PROJECT_DIR$/.bowerrc" />
         <option value="$PROJECT_DIR$/wp-content/themes/hotel/templates/html-header.twig" />
-        <option value="$PROJECT_DIR$/wp-content/themes/hotel/templates/header.twig" />
         <option value="$PROJECT_DIR$/wp-content/themes/hotel/templates/page-plugin.twig" />
         <option value="$PROJECT_DIR$/front/css/libs.scss" />
         <option value="$PROJECT_DIR$/front/css/parts/_footer.scss" />
@@ -156,7 +165,6 @@
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/front/scripts/libs.js" />
         <option value="$PROJECT_DIR$/front/scripts/es/main.js" />
-        <option value="$PROJECT_DIR$/wp-content/themes/hotel/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/hotel/templates/footer.twig" />
         <option value="$PROJECT_DIR$/front/css/common/_global.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/hotel/templates/base.twig" />
@@ -166,6 +174,8 @@
         <option value="$PROJECT_DIR$/front/css/parts/_right-sidebar.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/hotel/templates/sidebar.twig" />
         <option value="$PROJECT_DIR$/wp-content/themes/hotel/templates/home.twig" />
+        <option value="$PROJECT_DIR$/wp-content/themes/hotel/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/hotel/templates/header.twig" />
       </list>
     </option>
   </component>
@@ -344,7 +354,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30253000" />
+    <option name="totallyTimeSpent" value="30673000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="709" extended-state="6" />
@@ -469,13 +479,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/hotel/templates/header.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/hotel/templates/page-plugin.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -596,13 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/hotel/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="38" column="21" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/css/common/_global.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -670,6 +666,20 @@
             <element signature="n#style#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/hotel/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/hotel/templates/header.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
         </state>
       </provider>
     </entry>
