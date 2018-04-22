@@ -19,7 +19,7 @@
         padding: 20px;
         background-color: rgba($white, .6);
 
-        &:hover {
+        &:hover, &.current {
             background-color: $white;
         }
     }
