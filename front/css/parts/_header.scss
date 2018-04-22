@@ -10,16 +10,17 @@
     list-style: none;
     width: 500px;
     font-size: 26px;
+    margin-top: 18px;
 
     a {
         text-decoration: none;
         color: #000000;
         display: inline-block;
         padding: 20px;
-        background: url("img/bg_block.png");
+        background-color: rgba($white, .6);
 
         &:hover {
-            background: url("img/bg_block_hover.png");
+            background-color: $white;
         }
     }
 }
