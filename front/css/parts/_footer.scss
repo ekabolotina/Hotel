@@ -1,0 +1,30 @@
+.footer {
+    height: 100px;
+
+    h2 {
+        text-align: center;
+        font-size: 36px;
+        color: #ffffff;
+        font-weight: bold;
+        margin-top: 50px;
+    }
+
+    ul {
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        li {
+            display: inline-block;
+            margin-left: 60px;
+            font-size: 20px;
+            line-height: 26px;
+            color: #ffffff;
+            width: 150px;
+
+            img {
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
