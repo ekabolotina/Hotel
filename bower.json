@@ -17,5 +17,9 @@
   ],
   "dependencies": {
     "reset-css": "^3.0.0"
+  },
+  "devDependencies": {
+    "jssor-slider": "^27.1.0",
+    "jquery": "^3.3.1"
   }
 }
