@@ -1,0 +1,41 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+
+  <div class="middle">
+    {% if post.get_field('rooms')|length %}
+      {% set count = 0 %}
+      {% for room in post.get_field('rooms') %}
+        {% set count = count + 1 %}
+
+        <div class="room-wrap"{% if count != post.get_field('rooms')|length %} style="margin-bottom: 20px;"{% endif %}>
+          <div class="container">
+            <main class="content">
+              {% if room.gallery|length %}
+                <div class="slider1_container" style="position: relative; top: 0px; left: 0px; width: 650px; height: 350px;">
+                  <!-- Slides Container -->
+                  <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 650px; height: 350px;">
+                    {% for image in room.gallery %}
+                      <div><img u="image" src="{{ TimberImage(image) }}" /></div>
+                    {% endfor %}
+                  </div>
+                </div>
+              {% endif %}
+              <div id="main_block">
+                {{ room.description }}
+              </div>
+            </main><!-- .content -->
+          </div><!-- .container-->
+
+          <aside class="right-sidebar">
+            {% if room.price %}
+              Цена: {{ room.price }} р.
+            {% endif %}
+          </aside><!-- .right-sidebar -->
+        </div>
+
+      {% endfor %}
+    {% endif %}
+  </div><!-- .middle-->
+
+{% endblock %}
