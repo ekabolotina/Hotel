@@ -1,0 +1,21 @@
+{
+  "name": "hotel",
+  "description": "",
+  "authors": [
+    "Иван <ivan.rusia@mail.ru>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ekabolotina/Hotel",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "front/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reset-css": "^3.0.0"
+  }
+}
