@@ -49,6 +49,12 @@ class StarterSite extends TimberSite {
 		/* this is where you can add your own fuctions to twig */
 		$twig->addExtension( new Twig_Extension_StringLoader() );
 		$twig->addFilter( 'myfoo', new Twig_Filter_Function( 'myfoo' ) );
+		$json_decode_function = new Twig_SimpleFunction('json_decode',
+            function ($json) {
+                return json_decode($json, true);
+            }
+        );
+		$twig->addFunction($json_decode_function);
 		return $twig;
 	}
 
