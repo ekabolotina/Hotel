@@ -98,7 +98,7 @@ gulp.task('scripts', ['common-scripts'], function(){
 
 
 // Build project
-gulp.task('build', ['scss', 'scripts', 'imgs', 'svg-store', 'fonts'], function(){
+gulp.task('build', ['scss', 'scripts', 'imgs', 'fonts'], function(){
     gulp.src(params.dist.fonts + '/**/*') // Build fonts
         .pipe(gulp.dest(params.build.fonts));
 
