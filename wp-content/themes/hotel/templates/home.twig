@@ -3,27 +3,19 @@
 {% block content %}
   <div class="container">
     <main class="content">
-      <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 650px; height: 350px;">
-        <!-- Slides Container -->
-        <div u="slides"
-             style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 650px; height: 350px;">
-          <div><img u="image" src="/img/slider/1.jpg"/></div>
-          <div><img u="image" src="/img/slider/2.jpg"/></div>
-          <div><img u="image" src="/img/slider/3.jpg"/></div>
-          <div><img u="image" src="/img/slider/4.jpg"/></div>
+      {% if post.get_field('gallery')|length %}
+        <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 650px; height: 350px;">
+          <!-- Slides Container -->
+          <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 650px; height: 350px;">
+            {% for image in post.get_field('gallery') %}
+              <div><img u="image" src="{{ TimberImage(image) }}"></div>
+            {% endfor %}
+          </div>
         </div>
-      </div>
+      {% endif %}
 
       <div id="main_block">
-        <h2>Добро пожаловать в гостиницу "Исток"</h2>
-        <strong>«Исток»</strong> — единственная в своем роде гостиница Владивостока. Это не стандартная
-        гостиница-высотка, а прекрасный уютный коттедж в центре города.
-        В нашей гостинице вы можете не просто переночевать, а расслабиться, насладиться видом на бухту
-        Золотой Рог. В теплый вечер выйти на террасу и провести время на свежем воздухе. В нашей гостинице есть все для
-        полноценного отдыха. <br><br>
-        Эта великолепная домашняя гостиница <strong>«Исток»</strong> располагается в новом, построенном по современным
-        стандартам здании в одном из самых оживленных районов Владивостока.
-        В считанных метрах от гостиницы находится торговый комплекс «Черемушки».
+        {{ post.get_field('content_text') }}
       </div>
     </main><!-- .content -->
   </div><!-- .container-->
