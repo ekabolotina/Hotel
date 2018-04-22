@@ -19,6 +19,11 @@ class StarterSite extends TimberSite {
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
+
+        if( function_exists('acf_add_options_page') ) {
+            acf_add_options_page('Параметры сайта');
+        }
+
 		parent::__construct();
 	}
 
