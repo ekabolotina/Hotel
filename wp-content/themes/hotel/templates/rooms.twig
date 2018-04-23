@@ -29,7 +29,9 @@
 
           <aside class="right-sidebar">
             {% if room.price %}
-              Цена: {{ room.price }} р.
+              <span class="room-price">Цена: {{ room.price }} р.</span>
+              <br><br>
+              <a href="#modal-book" class="button button_size_full-width button_modal-open">Забронировать</a>
             {% endif %}
           </aside><!-- .right-sidebar -->
         </div>
