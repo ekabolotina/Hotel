@@ -2,3 +2,17 @@
 <br><br>
 <h2>Телефон для бронирования:</h2>
 <span>{{ options.global_sidebar_phone }}</span>
+<br><br>
+<a href="#modal-book" class="button button_size_full-width button_modal-open">Забронировать</a>
+
+<div class="modal" id="modal-book">
+  <div class="modal__close">&times;</div>
+  <h2 class="modal__heading">Забронируйте<br>номер</h2>
+  <form action="" class="form modal__form">
+    <label class="form__row">
+      <span class="form__caption">Номер телефона</span>
+      <input type="text" name="phone" class="form__input form__input_mask" data-mask="+7 (999) 999 99-99" placeholder="+7 (">
+    </label>
+    <input type="submit" class="button button_size_auto form__submit" value="Забронировать">
+  </form>
+</div>

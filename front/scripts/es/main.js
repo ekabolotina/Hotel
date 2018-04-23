@@ -1,3 +1,6 @@
+import Modal from './utils/modal';
+import Form from './utils/form';
+
 (($) => {
 
     $(document).ready(() => {
@@ -8,7 +11,13 @@
             new $JssorSlider$(sliderId, {
                 $AutoPlay: true
             });
-        })
+        });
+
+        new Modal('.modal', '.button_modal-open', '.modal__close');
+
+        $('.form').each((idx, elem) => {
+           new Form(elem);
+        });
 
     });
 
