@@ -4,9 +4,11 @@
   <div id="menu">
     <ul>
       {% for item in menu.items %}
-        <a href="{{ item.link }}"{% if item.current %} class="current"{% endif %}>
-          <li>{{ item.title }}</li>
-        </a>
+        <li>
+          <a href="{{ item.link }}"{% if item.current %} class="current"{% endif %}>
+          {{ item.title }}
+          </a>
+        </li>
       {% endfor %}
     </ul>
   </div>
