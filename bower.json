@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "jssor-slider": "^27.1.0",
-    "jquery": "^3.3.1"
+    "jquery": "^3.3.1",
+    "izimodal": "^1.5.1"
   }
 }
