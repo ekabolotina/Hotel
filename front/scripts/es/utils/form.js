@@ -22,13 +22,22 @@ export default class Form {
         });
     }
 
+    checkPhoneField (value) {
+        const check =  
+            /^\d{3} \d{3} \d{2} \d{2}$/.test(value) ||
+            /^\d{3} \d{2} \d{2}$/.test(value) ||
+            /^\+7 \d{3} \d{3} \d{2} \d{2}$/.test(value) ||
+            /^8 \d{3} \d{3} \d{2} \d{2}$/.test(value);
+        return check;
+    }
+
     checkFields () {
         let results = true;
-        this.$form.find('input')
+        this.$form.find('input:not([type=submit])')
             .removeClass(this.inputErrorClass)
             .each((idx, elem) => {
                 const $elem = $(elem);
-                if ($elem.val() === '') {
+                if ($elem.val() === '' || ($elem.data('mask') === 'tel' && !this.checkPhoneField($elem.val()))) {
                     results = false;
                     $elem.addClass(this.inputErrorClass);
                 }
