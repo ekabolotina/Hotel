@@ -41,7 +41,7 @@
             </html>
     ';
 
-    $mail->addAddress('ivan.rusia@mail.ru');
+    $mail->addAddress(get_field('global_orders_email', 'option'));
     $result = $mail->send();
 
     echo json_encode(['error' => $result ? 200 : $mail->ErrorInfo]);
