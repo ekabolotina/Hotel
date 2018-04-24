@@ -19,7 +19,7 @@
   {% endblock %}
 
 
-<body style="background-image: url({{ TimberImage(options.global_site_bg).src }});">
+<body style="background-color: {{ options.global_site_bg_color }}; background-image: url({{ TimberImage(options.global_site_bg).src }});">
   <div class="wrapper">
 
     {% block header %}
