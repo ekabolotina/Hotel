@@ -19,6 +19,13 @@ import Form from './utils/form';
            new Form(elem);
         });
 
+        $('.form__input_mask_tel').each((idex, element) => {
+            new Cleave(element, {
+                prefix: '+7 ',
+                phone: true,
+                phoneRegionCode: 'RU'
+            });
+        });
     });
 
 })(jQuery);
