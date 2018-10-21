@@ -1,0 +1,27 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+  <div class="container">
+    <main class="content">
+      {% if post.get_field('gallery')|length %}
+        <div class="slider1_container" style="position: relative; top: 0px; left: 0px; width: 650px; height: 350px;">
+          <!-- Slides Container -->
+          <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 650px; height: 350px;">
+            {% for image in post.get_field('gallery') %}
+              <div><img u="image" src="{{ TimberImage(image) }}"></div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
+      <div id="main_block">
+        {{ post.get_field('content_text') }}
+      </div>
+    </main><!-- .content -->
+  </div><!-- .container-->
+
+  <aside class="right-sidebar">
+    {% include 'sidebar.twig' %}
+  </aside><!-- .right-sidebar -->
+
+{% endblock %}

@@ -1,0 +1,35 @@
+.modal {
+    padding: 30px 15px;
+    width: 300px;
+    text-align: center;
+
+    &__close {
+        position: absolute;
+        top: -40px;
+        right: -25px;
+        border-radius: 100%;
+        box-shadow: 0 0 10px 0 rgba($black, .2);
+        font-size: 18px;
+        text-align: center;
+        width: 22px;
+        height: 22px;
+        line-height: 22px;
+        cursor: pointer;
+        transition: all .3s;
+        background: $white;
+
+        &:hover {
+            background-color: #eeeeee;
+        }
+    }
+
+    &__heading {
+        font-size: 35px;
+        line-height: 1;
+        font-weight: bold;
+    }
+
+    &__form {
+        margin-top: 20px;
+    }
+}

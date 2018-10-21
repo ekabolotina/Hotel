@@ -1,0 +1,38 @@
+.header {
+    height: 150px;
+}
+
+.logo {
+    float: left;
+}
+
+#menu {
+    list-style: none;
+    width: 500px;
+    font-size: 26px;
+    margin-top: 18px;
+
+    li {
+        margin: 0;
+        padding: 0;
+        display: block;
+        float: left;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000000;
+        display: inline-block;
+        padding: 20px;
+        background-color: rgba($white, .6);
+        transition: all .3s;
+
+        &.current {
+            background-color: $white;
+        }
+
+        &:hover {
+            background-color: rgba($white, .8);
+        }
+    }
+}

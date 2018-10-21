@@ -1,0 +1,15 @@
+<header class="header">
+  <div class="logo">
+  </div>
+  <div id="menu">
+    <ul>
+      {% for item in menu.items %}
+        <li>
+          <a href="{{ item.link }}"{% if item.current %} class="current"{% endif %}>
+          {{ item.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</header>

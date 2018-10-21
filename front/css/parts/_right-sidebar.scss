@@ -1,0 +1,38 @@
+.right-sidebar {
+    float: left;
+    width: 270px;
+    margin-left: -290px;
+    position: relative;
+    padding: 20px 10px 20px 10px;
+    background-color: rgba($white, .6);
+    text-align: center;
+    font-size: 22px;
+    line-height: 30px;
+
+    h2 {
+        font-weight: bold;
+        font-size: 22px;
+    }
+
+    span {
+        font-size: 30px;
+    }
+
+    ul li {
+        cursor: pointer;
+        font-size: 20px;
+
+        &:hover {
+            font-weight: bold;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #000000;
+    }
+
+    .room-price {
+        font-size: 30px;
+    }
+}

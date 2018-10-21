@@ -1,0 +1,37 @@
+{% extends "base.twig" %}
+
+{% block footer_scripts %}
+  {{ parent() }}
+
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  {% if post.get_field('map') %}
+    {% set map = json_decode(post.get_field('map')) %}
+    <script>
+      ymaps.ready(function () {
+          var map = new ymaps.Map('map_container', {
+              center: [{{ map.center_lat }}, {{ map.center_lng }}],
+              zoom: {{ map.zoom }}
+          });
+
+          {% for marker in map.marks %}
+            map.geoObjects.add(new ymaps.Placemark([{{ marker.coords[0] }}, {{ marker.coords[1] }}]));
+          {% endfor %}
+      });
+    </script>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <main class="content">
+      <div id="main_block">
+        <div id="map_container"></div>
+      </div>
+    </main><!-- .content -->
+  </div><!-- .container-->
+
+  <aside class="right-sidebar">
+    {% include 'sidebar.twig' %}
+  </aside><!-- .right-sidebar -->
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{
+  "name": "hotel",
+  "description": "",
+  "authors": [
+    "Иван <ivan.rusia@mail.ru>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ekabolotina/Hotel",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "front/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reset-css": "^3.0.0"
+  },
+  "devDependencies": {
+    "jssor-slider": "^27.1.0",
+    "jquery": "^3.3.1",
+    "izimodal": "^1.5.1",
+    "cleave.js": "^1.3.2"
+  }
+}

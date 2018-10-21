@@ -19,6 +19,11 @@ class StarterSite extends TimberSite {
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
+
+        if( function_exists('acf_add_options_page') ) {
+            acf_add_options_page('Параметры сайта');
+        }
+
 		parent::__construct();
 	}
 
@@ -34,8 +39,9 @@ class StarterSite extends TimberSite {
 		$context['foo'] = 'bar';
 		$context['stuff'] = 'I am a value set in your functions.php file';
 		$context['notes'] = 'These values are available everytime you call Timber::get_context();';
-		$context['menu'] = new TimberMenu();
+		$context['menu'] = new Timber\Menu('header_menu');
 		$context['site'] = $this;
+        $context['options'] = get_fields('option');
 		return $context;
 	}
 
@@ -43,6 +49,12 @@ class StarterSite extends TimberSite {
 		/* this is where you can add your own fuctions to twig */
 		$twig->addExtension( new Twig_Extension_StringLoader() );
 		$twig->addFilter( 'myfoo', new Twig_Filter_Function( 'myfoo' ) );
+		$json_decode_function = new Twig_SimpleFunction('json_decode',
+            function ($json) {
+                return json_decode($json, true);
+            }
+        );
+		$twig->addFunction($json_decode_function);
 		return $twig;
 	}
 
