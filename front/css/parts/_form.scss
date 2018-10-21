@@ -22,6 +22,13 @@
         &_error {
             border-color: red;
         }
+
+        &_textarea {
+            height: auto;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            resize: none;
+        }
     }
 
     &__caption {

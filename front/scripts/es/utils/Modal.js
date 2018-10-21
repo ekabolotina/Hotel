@@ -8,16 +8,21 @@ export default class Modal {
     }
 
     apply () {
-        this.$modal.iziModal();
+        this.$modal.iziModal({
+            bodyOverflow: true
+        });
 
         this.$open.click((e) => {
             e.preventDefault();
+
             if (e && e.currentTarget) {
                 const
                     $modal = $(e.currentTarget.hash),
                     $modalClose = $modal.find(this.closeSelector);
+
                 if ($modal.length) {
                     $modal.iziModal('open');
+
                     $modalClose.click((e) => {
                         e.preventDefault();
                         $modal.iziModal('close');

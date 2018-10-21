@@ -13,14 +13,4 @@
   {% endif %}
 </footer>
 
-<div class="modal" id="modal-book">
-  <div class="modal__close">&times;</div>
-  <h2 class="modal__heading">Забронируйте<br>номер</h2>
-  <form action="{{ site.theme.link }}/routes/send_form.php" class="form modal__form">
-    <label class="form__row">
-      <span class="form__caption">Номер телефона</span>
-      <input type="tel" name="phone" class="form__input form__input_mask_tel" placeholder="999 000 55 22" data-mask="tel">
-    </label>
-    <input type="submit" class="button button_size_auto form__submit" value="Забронировать">
-  </form>
-</div>
+{% include 'modal.twig' %}
