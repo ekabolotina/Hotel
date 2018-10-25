@@ -21,6 +21,17 @@ export default class Form {
         this.$input = this.$form.find(this.inputSelector);
         this.url = this.$form.attr('action');
 
+        this.$input.filter('[type="tel"]').intlTelInput({
+            onlyCountries: ['ru', 'am', 'az', 'by', 'ge', 'kg', 'lv', 'lt', 'md', 'tj', 'tm', 'ua', 'uz', 'ee'],
+            preferredCountries: ['ru'],
+            nationalMode: false,
+            separateDialCode: true,
+            hiddenInput: 'phone-with-code'
+        }).on('countrychange', (e) => {
+            this.setInputMaskByPlaceholder(e.currentTarget);
+            e.currentTarget.value = '';
+        });
+
         this.$form.on('submit', (e) => {
             e.preventDefault();
             this.sendForm();
@@ -35,6 +46,9 @@ export default class Form {
                 const validate = new Validate(el, el.dataset['validationType']).init();
                 $(el).data('validate', validate);
             }
+            if (el.type === 'tel') {
+                this.setInputMaskByPlaceholder(el);
+            }
         });
 
         return this;
@@ -48,7 +62,8 @@ export default class Form {
 
             if (
                 $elem.val() === '' ||
-                ($elem.data('validate') && !$elem.data('validate').isValid())
+                ($elem.data('validate') && !$elem.data('validate').isValid()) ||
+                ($elem.inputmask('getmetadata') && !$elem.inputmask('isComplete'))
             ) {
                 this.addInputError(elem);
                 results = false;
@@ -127,5 +142,9 @@ export default class Form {
                     this.removeLoading();
                 }, 3000);
             });
+    }
+
+    setInputMaskByPlaceholder(input) {
+        $(input).inputmask(input.placeholder.replace(/\d/g, '9'));
     }
 }

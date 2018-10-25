@@ -15,11 +15,4 @@ import Form from './utils/Form';
     $('.form').each((idx, elem) => {
        new Form(elem).init();
     });
-
-    $('.form__input[data-mask="tel"]').each((idex, element) => {
-        new Cleave(element, {
-            phone: true,
-            phoneRegionCode: 'RU'
-        });
-    });
 })(jQuery);

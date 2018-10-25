@@ -1,0 +1,20 @@
+.iti-flag {
+    background-image: url('#{$imgs}/intl-tel-input/flags.png');
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .iti-flag {background-image: url('#{$imgs}/intl-tel-input/flags@2x.png');}
+}
+
+.intl-tel-input {
+    display: block;
+
+    &.separate-dial-code .selected-dial-code {
+        padding-left: 10px;
+        font-size: 20px;
+    }
+
+    &.separate-dial-code .flag-container {
+        font-size: 15px;
+    }
+}

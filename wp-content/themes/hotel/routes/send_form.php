@@ -26,6 +26,7 @@
 
     $name = htmlspecialchars($_POST['name'], ENT_QUOTES);
     $phone = htmlspecialchars($_POST['phone'], ENT_QUOTES);
+    $phoneWithCode = htmlspecialchars($_POST['phone-with-code'], ENT_QUOTES);
     $email = htmlspecialchars($_POST['email'], ENT_QUOTES);
     $message = htmlspecialchars($_POST['message'], ENT_QUOTES);
     $reCaptcha = htmlspecialchars($_POST['g-recaptcha-response'], ENT_QUOTES);
@@ -33,7 +34,7 @@
     $text = "
         <p>Информация о клиенте:</p>
         <p><b>Имя:</b> $name.</p>
-        <p><b>Телефон:</b> $phone.</p>
+        <p><b>Телефон:</b> $phoneWithCode.</p>
         <p><b>E-mail:</b> $email.</p>
         <p><b>Сообщение:</b> $message.</p>
     ";

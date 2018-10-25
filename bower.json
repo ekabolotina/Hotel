@@ -16,7 +16,9 @@
     "tests"
   ],
   "dependencies": {
-    "reset-css": "^3.0.0"
+    "reset-css": "^3.0.0",
+    "intl-tel-input": "^14.0.3",
+    "inputmask": "^4.0.2"
   },
   "devDependencies": {
     "jssor-slider": "^27.1.0",
