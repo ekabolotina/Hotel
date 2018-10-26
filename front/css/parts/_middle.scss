@@ -26,6 +26,12 @@
     font-size: 18px;
     line-height: 24px;
 
+    h1 {
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
     h2 {
         font-weight: bold;
         font-size: 22px;
@@ -38,6 +44,33 @@
 
         li {
             list-style: circle;
+        }
+    }
+
+    table {
+        width: 100% !important;
+        margin-top: 15px;
+        border-left: 1px solid $black;
+        border-top: 1px solid $black;
+
+        tr {
+            &:first-of-type > td {
+                font-weight: bold;
+            }
+        }
+
+        td {
+            border-right: 1px solid $black;
+            border-bottom: 1px solid $black;
+            padding: 5px 10px;
+            font-size: 16px;
+            line-height: 1.2;
+            vertical-align: middle;
+
+            &:first-of-type {
+                white-space: nowrap;
+                font-weight: bold;
+            }
         }
     }
 }

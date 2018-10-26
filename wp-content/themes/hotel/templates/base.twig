@@ -14,8 +14,8 @@
   {{ function('wp_head') }}
 
   {% block head_styles %}
-    <link rel="stylesheet" href="{{ site.theme.link }}/static/css/libs.css" type="text/css">
-    <link rel="stylesheet" href="{{ site.theme.link }}/static/css/style.css" type="text/css">
+    <link rel="stylesheet" href="{{ site.theme.link }}/static/css/libs.css?v=2.0" type="text/css">
+    <link rel="stylesheet" href="{{ site.theme.link }}/static/css/style.css?v=2.0" type="text/css">
   {% endblock %}
 
 
@@ -40,8 +40,8 @@
 
   {% block footer_scripts %}
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    <script src="{{ site.theme.link }}/static/js/libs.js"></script>
-    <script src="{{ site.theme.link }}/static/js/main.js"></script>
+    <script src="{{ site.theme.link }}/static/js/libs.js?v=2.0"></script>
+    <script src="{{ site.theme.link }}/static/js/main.js?v=2.0"></script>
   {% endblock %}
 
 </body>
