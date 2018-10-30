@@ -1,7 +1,7 @@
 import Validate from "./Validate";
 
 export default class Form {
-    constructor (selector) {
+    constructor (selector, onSuccess = () => {}) {
         this.inputErrorClass = 'form__input_error';
         this.submitLoadingClass = 'button_loading';
 
@@ -12,7 +12,9 @@ export default class Form {
             success: 'form__notification_success',
             fail: 'form__notification_fail'
         };
+
         this.selector = selector;
+        this.onSuccess = onSuccess;
     }
 
     init () {
@@ -130,6 +132,9 @@ export default class Form {
                 if (data.error === 200) {
                     this.showNotification('success', 'Ваша заявка прината. Спасибо!');
                     this.$form.trigger('reset');
+                    setTimeout(() => {
+                        this.onSuccess();
+                    }, 3000);
                 } else {
                     this.showNotification('fail', 'К сожалению, произошла ошибка.');
                 }

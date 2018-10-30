@@ -10,9 +10,13 @@ import Form from './utils/Form';
         });
     });
 
-    new Modal('.modal', '.button_modal-open', '.modal__close');
+    const modalBook = new Modal(
+        '.modal-book',
+        '.button_modal-open',
+        '.modal__close'
+    ).init();
 
-    $('.form').each((idx, elem) => {
-       new Form(elem).init();
-    });
+    new Form('.modal-book__form', () => {
+        modalBook.close();
+    }).init();
 })(jQuery);
